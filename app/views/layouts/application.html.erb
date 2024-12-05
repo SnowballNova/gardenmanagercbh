@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsGardenManager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag asset_path("logo.png") %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= render "shared/navbar" %>
+    <div class="content">
+      <%= yield %>
+    </div>
+    <%= render "shared/footer" %>
+    <!-- WARNING: DO NOT DELETE THE LINE BELOW -->
+    <div id="rails-garden-manager-watermark"></div>
+  </body>
+</html>

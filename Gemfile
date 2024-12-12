@@ -54,6 +54,7 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "rest-client"
 gem "faker"
+gem "brakeman"
 
 group :development, :test do
   gem 'brakeman'
@@ -66,6 +67,9 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+
+  # Add bullet to help detect N+1 queries
+  gem "bullet"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

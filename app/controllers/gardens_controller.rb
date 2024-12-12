@@ -8,9 +8,8 @@ class GardensController < ApplicationController
   end
 
   def show
-    @garden = Garden.find(params[:id])
+    @garden = Garden.includes(:plants).find(params[:id])
     @plant = Plant.new
-    @plants = @garden.plants
   end
 
   def new
